@@ -12,18 +12,18 @@ Cypress.Commands.add('login', (user, pass) => {
         url: '/minha-conta',
         method: 'POST',
         body: fd
-    }).then(resp => {
-        resp.headers['set-cookie'].forEach(cookie => {
+    }).its('allRequestResponses').its('0').its('Response Headers').then(response => {
+        response['set-cookie'].forEach(cookie => {
             const firstPart = cookie.split(';')[0]
             const divisor = firstPart.indexOf('=')
             const key = firstPart.substring(0, divisor)
-            const value = firstPart.substring(divisor+1)
+            const value = firstPart.substring(divisor + 1)
             cy.setCookie(key, value)
         })
     })
 
     cy.visit('/minha-conta')
-}),
+});
 
 Cypress.Commands.add('addProducts', (product, size , color, quantity) => {
     cy.get('#primary-menu > .menu-item-629 > a').click()

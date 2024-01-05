@@ -5,5 +5,5 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
     },
     baseUrl: 'http://lojaebac.ebaconline.art.br'
-  },
+  }
 });
