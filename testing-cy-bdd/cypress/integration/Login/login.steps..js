@@ -1,10 +1,10 @@
 /// <reference types="cypress"/>
 
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
-const { dashboardPage } = require('../cypress/support/pages')
+import { Given, When, Then } from 'cypress-cucumber-preprocessor'
+const { dashboardPage } = require('../../support/pages')
 
 Given('I visit EBAC Store', () => {
-    cy.visit('/')
+    cy.visit('/minha-conta')
 })
 
 When("I log in with user {string} and pass {string}", (user, pass) => {
