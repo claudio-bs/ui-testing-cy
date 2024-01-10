@@ -1,12 +1,12 @@
 /// <reference types="cypress"/>
 
-const data = require('../fixtures/data.json')
+const dataLogin = require('../fixtures/dataLogin.json')
 const { dashboardPage } = require('../support/pages')
 import InvoicingPage from "../support/pages/invoicing.page"
 
 describe('Access My Account Panel, Add Product to the cart and complete the purchase ', () => {
     beforeEach(() => {
-        cy.login(data.username, data.password)
+        cy.login(dataLogin.username, dataLogin.password)
     });
 
     it('should login with valid credentials, add product to the cart and complete the purchase', () => {

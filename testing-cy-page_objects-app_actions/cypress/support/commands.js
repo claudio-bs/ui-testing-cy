@@ -36,3 +36,11 @@ Cypress.Commands.add('addProducts', (product, size , color, quantity) => {
     cy.get('.input-text').clear().type(quantity)
     cy.get('.single_add_to_cart_button').click()
 });
+
+Cypress.Commands.add('addProductIntercept', (size , color, quantity) => {
+    cy.get('#ui-id-1 > :nth-child(1)').click()
+    cy.get('.button-variable-item-' + size).click()
+    cy.get('.button-variable-item-' + color).click()
+    cy.get('.input-text').clear().type(quantity)
+    cy.get('.single_add_to_cart_button').click()
+});

@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-const data = require('../fixtures/data.json')
+const dataLogin = require('../fixtures/dataLogin.json')
 const { dashboardPage } = require('../support/pages')
 
 describe('Access My Account Panel', () => {
@@ -10,9 +10,9 @@ describe('Access My Account Panel', () => {
             cy.visit('/')
         });
 
-        context(`When I log in with user ${data.username} and pass ${data.password}`, () => {
+        context(`When I log in with user ${dataLogin.username} and pass ${dataLogin.password}`, () => {
             beforeEach(() => {
-                cy.login(data.username, data.password)
+                cy.login(dataLogin.username, dataLogin.password)
             });
 
             it('Then the user dashboard page should be visible', () => {
