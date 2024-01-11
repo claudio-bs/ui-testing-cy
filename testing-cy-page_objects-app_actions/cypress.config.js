@@ -2,8 +2,19 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
+    //projectId: 'yhug',
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/results",
+      overwrite: false,
+      html: true,
+      json: true,
     },
-    baseUrl: 'http://lojaebac.ebaconline.art.br'
-  }
+    browser: "electron",
+    video: true,
+    screenshot: true,
+    baseUrl: 'http://lojaebac.ebaconline.art.br',
+    setupNodeEvents(on, config) {},
+  },
 });
+

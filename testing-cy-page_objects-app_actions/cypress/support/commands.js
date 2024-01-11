@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-Cypress.Commands.add('login', (user, pass) => {
+/*Cypress.Commands.add('login', (user, pass) => {
     const fd = new FormData()
     fd.append('username', user)
     fd.append('password', pass)
@@ -11,7 +11,7 @@ Cypress.Commands.add('login', (user, pass) => {
     cy.request({
         url: '/minha-conta',
         method: 'POST',
-        body: fd
+        body: fd 
     }).its('allRequestResponses').its('0').its('Response Headers').then(response => {
         response['set-cookie'].forEach(cookie => {
             const firstPart = cookie.split(';')[0]
@@ -23,6 +23,13 @@ Cypress.Commands.add('login', (user, pass) => {
     })
 
     cy.visit('/minha-conta')
+});*/
+
+Cypress.Commands.add('login', (user, pass) => {
+    cy.visit('/my-account')
+    cy.get('#username').click().type(user)
+    cy.get('#password').click().type(pass, { log: false })
+    cy.get('.woocommerce-form > .button').click()
 });
 
 Cypress.Commands.add('addProducts', (product, size , color, quantity) => {
