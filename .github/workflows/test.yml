@@ -2,7 +2,7 @@ name: ui-testing-cy
 
 on:
   push:
-    branches: [ exercicios/modulo-23 ]
+    branches: [ exercicios/modulo-26 ]
 
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
         with:
           install-command: npm install
           browser: chrome
-          test: npm test
+          start: npm test
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
