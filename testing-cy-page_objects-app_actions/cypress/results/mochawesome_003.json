@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-11T14:56:34.413Z",
-    "end": "2024-01-11T14:56:39.984Z",
-    "duration": 5571,
+    "start": "2024-01-27T19:39:37.498Z",
+    "end": "2024-01-27T19:39:43.395Z",
+    "duration": 5897,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5a1dc612-ce23-4a2d-85d2-8e4b8a2f920d",
+      "uuid": "d2acccd6-8bd5-4ee6-934d-2c1dfdf0b880",
       "title": "",
       "fullFile": "cypress\\e2e\\pageObjectsTest.cy.js",
       "file": "cypress\\e2e\\pageObjectsTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b097900a-1757-4524-9c7a-f3890ef0eacd",
+          "uuid": "e9da8a9b-d7f5-416b-9ab1-ed077e4cc02d",
           "title": "Create account",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should create account",
               "fullTitle": "Create account should create account",
               "timedOut": null,
-              "duration": 5523,
+              "duration": 5846,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "let emailFaker = faker.internet.email();\nlet passFaker = faker.internet.password();\ncy.get('.icon-user-unfollow').click();\nregisterPage.create(emailFaker, passFaker);\ndashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");",
               "err": {},
-              "uuid": "a3004b62-885a-4661-a636-c2056e65aa52",
-              "parentUUID": "b097900a-1757-4524-9c7a-f3890ef0eacd",
+              "uuid": "7d257c99-8702-4a98-a216-962867a9116a",
+              "parentUUID": "e9da8a9b-d7f5-416b-9ab1-ed077e4cc02d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a3004b62-885a-4661-a636-c2056e65aa52"
+            "7d257c99-8702-4a98-a216-962867a9116a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5523,
+          "duration": 5846,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

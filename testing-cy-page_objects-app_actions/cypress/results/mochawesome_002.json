@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-11T14:56:21.676Z",
-    "end": "2024-01-11T14:56:29.562Z",
-    "duration": 7886,
+    "start": "2024-01-27T19:39:23.771Z",
+    "end": "2024-01-27T19:39:31.838Z",
+    "duration": 8067,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8393f8a8-dfd5-44af-962b-d10b3c3925de",
+      "uuid": "b9c2d850-492b-4a3f-969e-792aedb5ed38",
       "title": "",
       "fullFile": "cypress\\e2e\\interceptTest.cy.js",
       "file": "cypress\\e2e\\interceptTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b06faa65-6ba0-4353-9df1-51c759d5c44d",
+          "uuid": "44161baa-a0da-4235-ac65-a5bf1cb21aa2",
           "title": "Add product, remove and update items in the shopping cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
               "fullTitle": "Add product, remove and update items in the shopping cart autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
               "timedOut": null,
-              "duration": 7713,
+              "duration": 7967,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search('Sinbad');\n_pages.productSearchPage.productList.first().should('have.attr', 'title', 'Sinbad Fitness Tank');\ncy.addProductIntercept('L', 'Blue', 3);\ncy.get('.woocommerce-message').should('contain', '3 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\n_pages.updateCart.cartUpdate();\n_pages.removeProduct.productRemove();",
               "err": {},
-              "uuid": "4a65a35e-5e5c-4b65-8fdf-a23a6b75856f",
-              "parentUUID": "b06faa65-6ba0-4353-9df1-51c759d5c44d",
+              "uuid": "fbf84599-ecc6-4b69-9a1f-2a1bb77b33ed",
+              "parentUUID": "44161baa-a0da-4235-ac65-a5bf1cb21aa2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4a65a35e-5e5c-4b65-8fdf-a23a6b75856f"
+            "fbf84599-ecc6-4b69-9a1f-2a1bb77b33ed"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 7713,
+          "duration": 7967,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

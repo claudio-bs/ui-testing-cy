@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-11T14:56:13.280Z",
-    "end": "2024-01-11T14:56:19.181Z",
-    "duration": 5901,
+    "start": "2024-01-27T19:39:15.231Z",
+    "end": "2024-01-27T19:39:21.224Z",
+    "duration": 5993,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8962cde8-fcee-4e1c-bb26-482f6dbb27f8",
+      "uuid": "7c9df72e-4b63-4683-a933-0a5620ef3752",
       "title": "",
       "fullFile": "cypress\\e2e\\bddTest.cy.js",
       "file": "cypress\\e2e\\bddTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d610ee7b-5fd2-4fed-9de9-e240c9566895",
+          "uuid": "5952a66c-521a-413e-a43e-c56711c13c7a",
           "title": "Access My Account Panel",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "856691a5-f850-4c33-8bca-43d63dd8727c",
+              "uuid": "9ffb564d-4af0-46f7-9a61-092171d6fd29",
               "title": "Given I visit EBAC Store",
               "fullFile": "",
               "file": "",
@@ -45,7 +45,7 @@
               "tests": [],
               "suites": [
                 {
-                  "uuid": "ad6b57fb-d2c0-4946-975e-840a58dd51d6",
+                  "uuid": "56f7ae40-3a2e-4749-9338-9990161abb73",
                   "title": "When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@",
                   "fullFile": "",
                   "file": "",
@@ -56,7 +56,7 @@
                       "title": "Then the user dashboard page should be visible",
                       "fullTitle": "Access My Account Panel Given I visit EBAC Store When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@ Then the user dashboard page should be visible",
                       "timedOut": null,
-                      "duration": 5814,
+                      "duration": 5916,
                       "state": "passed",
                       "speed": "medium",
                       "pass": true,
@@ -65,20 +65,20 @@
                       "context": null,
                       "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");",
                       "err": {},
-                      "uuid": "5bf29023-d073-44db-a614-e7033f35f63b",
-                      "parentUUID": "ad6b57fb-d2c0-4946-975e-840a58dd51d6",
+                      "uuid": "c90c09e5-79bc-4806-ac9e-d37be9b7e4e6",
+                      "parentUUID": "56f7ae40-3a2e-4749-9338-9990161abb73",
                       "isHook": false,
                       "skipped": false
                     }
                   ],
                   "suites": [],
                   "passes": [
-                    "5bf29023-d073-44db-a614-e7033f35f63b"
+                    "c90c09e5-79bc-4806-ac9e-d37be9b7e4e6"
                   ],
                   "failures": [],
                   "pending": [],
                   "skipped": [],
-                  "duration": 5814,
+                  "duration": 5916,
                   "root": false,
                   "rootEmpty": false,
                   "_timeout": 2000
