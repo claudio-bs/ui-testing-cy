@@ -8,6 +8,6 @@
     "node": "^21.2.0"
   },
   "scripts": {
-    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=false,json=true && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json"
+    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=true,json=false && npx mochawesome-merge \"cypress/results/*.html\" > mochawesome.html && npx marge mochawesome.html"
 }
 }
