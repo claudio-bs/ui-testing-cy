@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-30T19:02:21.257Z",
+    "end": "2024-01-30T19:02:27.367Z",
+    "duration": 6110,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "09b8eb2d-b592-484e-8dd0-85ff6d044a64",
+      "title": "",
+      "fullFile": "cypress\\e2e\\bddTest.cy.js",
+      "file": "cypress\\e2e\\bddTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c67a2586-980e-4a5f-bc4a-51d8b40bb8a5",
+          "title": "Access My Account Panel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "dce0088c-87ff-483e-99d8-43ae70638628",
+              "title": "Given I visit EBAC Store",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "a04fde50-f9f5-44a2-b043-4b3ab27cc5c4",
+                  "title": "When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Then the user dashboard page should be visible",
+                      "fullTitle": "Access My Account Panel Given I visit EBAC Store When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@ Then the user dashboard page should be visible",
+                      "timedOut": null,
+                      "duration": 6043,
+                      "state": "passed",
+                      "speed": "medium",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");",
+                      "err": {},
+                      "uuid": "b0b9a549-9427-4fb1-94d9-944a5bb19bcf",
+                      "parentUUID": "a04fde50-f9f5-44a2-b043-4b3ab27cc5c4",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "b0b9a549-9427-4fb1-94d9-944a5bb19bcf"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 6043,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

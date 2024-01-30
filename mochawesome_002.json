@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-30T19:02:28.882Z",
+    "end": "2024-01-30T19:02:36.291Z",
+    "duration": 7409,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c058e62e-6923-4d4f-970f-6aa229ec3405",
+      "title": "",
+      "fullFile": "cypress\\e2e\\interceptTest.cy.js",
+      "file": "cypress\\e2e\\interceptTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "028e6a75-6629-403c-b4f4-fbbd31b31321",
+          "title": "Add product, remove and update items in the shopping cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
+              "fullTitle": "Add product, remove and update items in the shopping cart autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
+              "timedOut": null,
+              "duration": 7341,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search('Sinbad');\n_pages.productSearchPage.productList.first().should('have.attr', 'title', 'Sinbad Fitness Tank');\ncy.addProductIntercept('L', 'Blue', 3);\ncy.get('.woocommerce-message').should('contain', '3 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\n_pages.updateCart.cartUpdate();\n_pages.removeProduct.productRemove();",
+              "err": {},
+              "uuid": "fca43aa6-e8c6-4e10-b2d2-3c383473cd5b",
+              "parentUUID": "028e6a75-6629-403c-b4f4-fbbd31b31321",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fca43aa6-e8c6-4e10-b2d2-3c383473cd5b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
