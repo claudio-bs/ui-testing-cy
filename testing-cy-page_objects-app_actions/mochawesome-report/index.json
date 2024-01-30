@@ -1,0 +1,317 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-01-30T19:01:44.110Z",
+    "end": "2024-01-30T19:02:45.479Z",
+    "duration": 61369
+  },
+  "results": [
+    {
+      "uuid": "09b8eb2d-b592-484e-8dd0-85ff6d044a64",
+      "title": "",
+      "fullFile": "cypress\\e2e\\bddTest.cy.js",
+      "file": "cypress\\e2e\\bddTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c67a2586-980e-4a5f-bc4a-51d8b40bb8a5",
+          "title": "Access My Account Panel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "dce0088c-87ff-483e-99d8-43ae70638628",
+              "title": "Given I visit EBAC Store",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "a04fde50-f9f5-44a2-b043-4b3ab27cc5c4",
+                  "title": "When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Then the user dashboard page should be visible",
+                      "fullTitle": "Access My Account Panel Given I visit EBAC Store When I log in with user teste_aluno_cbs@teste.com and pass NYFtpQy3V7Qyg5@ Then the user dashboard page should be visible",
+                      "timedOut": null,
+                      "duration": 6043,
+                      "state": "passed",
+                      "speed": "medium",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");",
+                      "err": {},
+                      "uuid": "b0b9a549-9427-4fb1-94d9-944a5bb19bcf",
+                      "parentUUID": "a04fde50-f9f5-44a2-b043-4b3ab27cc5c4",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "b0b9a549-9427-4fb1-94d9-944a5bb19bcf"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 6043,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c058e62e-6923-4d4f-970f-6aa229ec3405",
+      "title": "",
+      "fullFile": "cypress\\e2e\\interceptTest.cy.js",
+      "file": "cypress\\e2e\\interceptTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "028e6a75-6629-403c-b4f4-fbbd31b31321",
+          "title": "Add product, remove and update items in the shopping cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
+              "fullTitle": "Add product, remove and update items in the shopping cart autocomplete product item and added to shopping cart should be returned correctly, then update the same by reducing the items and then remove the products",
+              "timedOut": null,
+              "duration": 7341,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search('Sinbad');\n_pages.productSearchPage.productList.first().should('have.attr', 'title', 'Sinbad Fitness Tank');\ncy.addProductIntercept('L', 'Blue', 3);\ncy.get('.woocommerce-message').should('contain', '3 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\n_pages.updateCart.cartUpdate();\n_pages.removeProduct.productRemove();",
+              "err": {},
+              "uuid": "fca43aa6-e8c6-4e10-b2d2-3c383473cd5b",
+              "parentUUID": "028e6a75-6629-403c-b4f4-fbbd31b31321",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fca43aa6-e8c6-4e10-b2d2-3c383473cd5b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "81d14e1a-b73d-48d3-abab-18590a18ebc6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pageObjectsTest.cy.js",
+      "file": "cypress\\e2e\\pageObjectsTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1de4c213-699f-40d3-8bef-3b4e708b5abf",
+          "title": "Create account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create account",
+              "fullTitle": "Create account should create account",
+              "timedOut": null,
+              "duration": 5533,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let emailFaker = faker.internet.email();\nlet passFaker = faker.internet.password();\ncy.get('.icon-user-unfollow').click();\nregisterPage.create(emailFaker, passFaker);\ndashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");",
+              "err": {},
+              "uuid": "4474cf23-a839-4d44-8a4d-2c1a70c7107b",
+              "parentUUID": "1de4c213-699f-40d3-8bef-3b4e708b5abf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4474cf23-a839-4d44-8a4d-2c1a70c7107b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "1ea53d7e-f007-45cd-8234-1aa4e8bceafc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\appActionsTest.cy.js",
+      "file": "cypress\\e2e\\appActionsTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
+          "title": "Access My Account Panel, Add Product to the cart and complete the purchase ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with valid credentials, add validated product to the cart and complete the purchase",
+              "fullTitle": "Access My Account Panel, Add Product to the cart and complete the purchase  should login with valid credentials, add validated product to the cart and complete the purchase",
+              "timedOut": null,
+              "duration": 35232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");\nproductsPage.productsSearch();\nproductsPage.productList.each(product => {\n  let productDetailsLink = product.attr('href');\n  let productTitle = product.attr('title');\n  cy.visit(productDetailsLink).then(() => {\n    productDetailsPage.breadcrumbProduct.should('include.text', productTitle);\n    productDetailsPage.productTitle.invoke('text').then(text => {\n      expect(text).to.be.equal(productTitle);\n    });\n    productDetailsPage.variations.find('[for]').should('have.length', 2).and('be.visible');\n  });\n});\ncy.addProducts('Sinbad Fitness Tank', 'L', 'Blue', 2);\ncy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\ncy.get('.checkout-button').click();\n_invoicing.default.editInvoicing();\ncy.get('#place_order').click();\ncy.get('.woocommerce-notice').contains('Obrigado. Seu pedido foi recebido.');\ncy.get('.woocommerce-order > :nth-child(3)').contains('Pagar em dinheiro na entrega.');",
+              "err": {},
+              "uuid": "8d4e87ec-615a-4a2b-940e-46f8e7dcf219",
+              "parentUUID": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d4e87ec-615a-4a2b-940e-46f8e7dcf219"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35232,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
