@@ -18,6 +18,64 @@
   },
   "results": [
     {
+      "uuid": "1ea53d7e-f007-45cd-8234-1aa4e8bceafc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\appActionsTest.cy.js",
+      "file": "cypress\\e2e\\appActionsTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
+          "title": "Access My Account Panel, Add Product to the cart and complete the purchase ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with valid credentials, add validated product to the cart and complete the purchase",
+              "fullTitle": "Access My Account Panel, Add Product to the cart and complete the purchase  should login with valid credentials, add validated product to the cart and complete the purchase",
+              "timedOut": null,
+              "duration": 35232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");\nproductsPage.productsSearch();\nproductsPage.productList.each(product => {\n  let productDetailsLink = product.attr('href');\n  let productTitle = product.attr('title');\n  cy.visit(productDetailsLink).then(() => {\n    productDetailsPage.breadcrumbProduct.should('include.text', productTitle);\n    productDetailsPage.productTitle.invoke('text').then(text => {\n      expect(text).to.be.equal(productTitle);\n    });\n    productDetailsPage.variations.find('[for]').should('have.length', 2).and('be.visible');\n  });\n});\ncy.addProducts('Sinbad Fitness Tank', 'L', 'Blue', 2);\ncy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\ncy.get('.checkout-button').click();\n_invoicing.default.editInvoicing();\ncy.get('#place_order').click();\ncy.get('.woocommerce-notice').contains('Obrigado. Seu pedido foi recebido.');\ncy.get('.woocommerce-order > :nth-child(3)').contains('Pagar em dinheiro na entrega.');",
+              "err": {},
+              "uuid": "8d4e87ec-615a-4a2b-940e-46f8e7dcf219",
+              "parentUUID": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d4e87ec-615a-4a2b-940e-46f8e7dcf219"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35232,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
       "uuid": "09b8eb2d-b592-484e-8dd0-85ff6d044a64",
       "title": "",
       "fullFile": "cypress\\e2e\\bddTest.cy.js",
@@ -215,64 +273,6 @@
           "pending": [],
           "skipped": [],
           "duration": 5533,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "1ea53d7e-f007-45cd-8234-1aa4e8bceafc",
-      "title": "",
-      "fullFile": "cypress\\e2e\\appActionsTest.cy.js",
-      "file": "cypress\\e2e\\appActionsTest.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
-          "title": "Access My Account Panel, Add Product to the cart and complete the purchase ",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "should login with valid credentials, add validated product to the cart and complete the purchase",
-              "fullTitle": "Access My Account Panel, Add Product to the cart and complete the purchase  should login with valid credentials, add validated product to the cart and complete the purchase",
-              "timedOut": null,
-              "duration": 35232,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "dashboardPage.siteTitle.should(\"be.visible\");\ndashboardPage.checkName.should(\"be.visible\");\ndashboardPage.mensage.should(\"be.visible\");\nproductsPage.productsSearch();\nproductsPage.productList.each(product => {\n  let productDetailsLink = product.attr('href');\n  let productTitle = product.attr('title');\n  cy.visit(productDetailsLink).then(() => {\n    productDetailsPage.breadcrumbProduct.should('include.text', productTitle);\n    productDetailsPage.productTitle.invoke('text').then(text => {\n      expect(text).to.be.equal(productTitle);\n    });\n    productDetailsPage.variations.find('[for]').should('have.length', 2).and('be.visible');\n  });\n});\ncy.addProducts('Sinbad Fitness Tank', 'L', 'Blue', 2);\ncy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.');\ncy.get('.woocommerce-message > .button').click();\ncy.get('.checkout-button').click();\n_invoicing.default.editInvoicing();\ncy.get('#place_order').click();\ncy.get('.woocommerce-notice').contains('Obrigado. Seu pedido foi recebido.');\ncy.get('.woocommerce-order > :nth-child(3)').contains('Pagar em dinheiro na entrega.');",
-              "err": {},
-              "uuid": "8d4e87ec-615a-4a2b-940e-46f8e7dcf219",
-              "parentUUID": "eda4ab30-8e23-4bc2-98fe-9a6eaa4187e2",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "8d4e87ec-615a-4a2b-940e-46f8e7dcf219"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 35232,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

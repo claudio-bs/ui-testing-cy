@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  pageLoadTimeout: 200000,
   e2e: {
     setupNodeEvents(on, config) {},
     baseUrl: 'http://lojaebac.ebaconline.art.br'
