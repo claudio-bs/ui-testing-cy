@@ -6,7 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {},
     baseUrl: 'http://lojaebac.ebaconline.art.br'
   },
-    projectId: 'yhug',
+    projectId: '6qdsw5',
     reporter: "mochawesome",
     reporterOptions: {
       reportDir: "mochawesome-report",
